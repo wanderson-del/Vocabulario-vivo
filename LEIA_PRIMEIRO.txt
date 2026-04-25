@@ -1,0 +1,34 @@
+VOCABULÁRIO VIVO V1
+
+App irmão do Leitor Premium.
+
+Arquivos para subir no GitHub Pages:
+1. index.html
+2. manifest.json
+3. sw.js
+4. icon-192.png
+5. icon-512.png
+
+Funções:
+- Adicionar palavra/frase em inglês.
+- Tradução em português.
+- Exemplo.
+- Observação.
+- Ouvir pronúncia via voz do navegador.
+- Revisão com Errei / Difícil / Bom / Fácil.
+- Modo listening.
+- Modo escrita.
+- Lista de palavras: novas, para hoje, em loop e dominadas.
+- Exportar backup JSON.
+- Importar backup JSON.
+- Exportar TXT para estudar.
+- PWA instalável pelo Chrome quando hospedado em GitHub Pages.
+
+Como publicar:
+1. Crie um repositório no GitHub, por exemplo: Vocabulario-vivo.
+2. Suba os 5 arquivos principais na raiz.
+3. Vá em Settings > Pages.
+4. Source: Deploy from a branch.
+5. Branch: main ou principal.
+6. Pasta: /(root).
+7. Abra o link no Chrome e instale o app.
