@@ -196,6 +196,51 @@ function mostrarFeedback(res){
   }
 }
 
+
+// === V5 SISTEMA BASE ===
+let progresso = {};
+
+function registrarResultado(palavra, resultado){
+  if(!progresso[palavra]) progresso[palavra] = {nivel:0};
+  
+  if(resultado==="acerto") progresso[palavra].nivel++;
+  if(resultado==="erro") progresso[palavra].nivel = Math.max(0, progresso[palavra].nivel-1);
+
+  localStorage.setItem("progresso", JSON.stringify(progresso));
+}
+
+function carregarProgresso(){
+  progresso = JSON.parse(localStorage.getItem("progresso")||"{}");
+}
+
+carregarProgresso();
+
 </script>
+
+<style>
+.modeBox{
+  margin-top:12px;
+  padding:14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.05);
+}
+.modeBtn{
+  margin-top:8px;
+  width:100%;
+  padding:12px;
+  border-radius:14px;
+  background:#22c55e;
+  color:white;
+  font-weight:700;
+}
+</style>
+
+<div class="modeBox">
+  <div><strong>Modos de treino</strong></div>
+  <button class="modeBtn" onclick="alert('Treino rápido iniciando em breve')">⚡ Treino rápido</button>
+  <button class="modeBtn" onclick="alert('Listening PRO em breve')">🔊 Listening PRO</button>
+  <button class="modeBtn" onclick="alert('Modo fala em breve')">🗣️ Fala</button>
+</div>
+
 </body>
 </html>
